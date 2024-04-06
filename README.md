@@ -1,6 +1,6 @@
 # `blavad` theme
 
-Easily create PDFs with Markdown syntax in a modern, ready-to-use theme.
+Easily create PDFs modern presentation media using Markdown syntax thanks to the ready-to-use and modern **blavad** theme for marp.
 
 ## How to use ?
 
