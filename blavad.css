@@ -279,7 +279,7 @@ pre {
   background-color: var(--white);
   border-radius: 100px;
   border: 0.1rem solid var(--black1);
-  /* padding: 0 1rem; */
+  padding: 0 1rem;
   min-width: 1.5rem;
   height: 1.5rem;
   position: absolute;
@@ -291,7 +291,6 @@ pre {
   left: -12px;
   font-size: 0.8rem;
   transform: translate(0%, 0%);
-
 }
 
 .block>h1 {
