@@ -2,22 +2,7 @@
 
 Easily create PDFs modern presentation media using Markdown syntax thanks to the ready-to-use and modern **blavad** theme for marp.
 
-<iframe src="https://raw.githubusercontent.com/blavad/marp-blavad-theme/main/theme-blavad-example.pdf" style="width:600px;height:500"></iframe>
-
-<!-- <div style="display:flex;flex-direction:row">
-
-<div style="flex:0.3">
-<img src="./assets/img/exemple-1.png">
-<div>
-<div style="flex:0.3">
-<img src="./assets/img/exemple-2.png">
-<div>
-
-<div style="flex:0.3">
-<img src="./assets/img/exemple-3.png">
-<div>
-
-<div> -->
+<img src="./assets/img/exemple-0.jpg">
 
 ## How to install ?
 
