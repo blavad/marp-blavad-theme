@@ -3,7 +3,11 @@
   "markdown.marp.strictPathResolutionDuringExport": false,
   "markdown.marp.themes": [
     "./themes/blavad.css",
-    "./themes/blavad-exos.css"
+    "./themes/blavad-exos.css",
+    "./themes/blavad/blavad.css",
+    "./themes/blavad/blavad-exos.css",
+    "./marp-blavad-theme/blavad.css",
+    "./marp-blavad-theme/blavad-exos.css"
   ],
   "markdown.marp.chromePath": "",
   "files.associations": {
