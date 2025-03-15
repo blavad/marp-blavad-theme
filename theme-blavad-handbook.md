@@ -4,7 +4,10 @@ paginate: true
 theme: blavad
 ---
 
-# Handbook: `blavad` theme
+<!-- PAGE DE COUVERTURE -->
+<!-- _paginate: skip -->
+<!-- _class: cover -->
+<div class='coverBlockCenter'><div class='coverModuleName'>Comment ça marche ?</div><div class='coverCourseName'><span class='important'># </span>blavad theme</div><div class='coverAuthor'>par <span class='important'>David Albert</span></div></div><img class='coverFooterLeft' height='60px' src='' /><div class='coverYear coverFooterRight'>Date</div>
 
 ---
 
@@ -18,17 +21,55 @@ theme: blavad
 
 ## Le texte
 
-### Accent Bold
+</br>
 
-```html
-<b class="important"></b>
+<div class='flex-horizontal'><div class='flex'>
+
+### Texte gras
+
+```md
+**Text gras**
 ```
 
-### Accent Italic
+**Text gras**
 
-```html
-<i class="important"></i>
+</div><div class='flex'>
+
+### Texte italique
+
+```md
+_Text italique_
 ```
+
+_Text italique_
+
+</div></div>
+
+</br>
+</hr>
+</br>
+
+<div class='flex-horizontal'><div class='flex'>
+
+### Important gras
+
+```md
+<b class="important">Texte important</b>
+```
+
+<b class="important">Texte important</b>
+
+</div><div class='flex'>
+
+### Important italique
+
+```md
+<i class="important">Texte italique important</i>
+```
+
+<i class="important">Text italique important</i>
+
+</div></div>
 
 ---
 

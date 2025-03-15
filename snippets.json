@@ -186,6 +186,11 @@
     "body": "<!-- _class: bg3 -->\n\n",
     "description": "Définir l'arrière plan de la slide."
   },
+  "Background 4": {
+    "prefix": ["bg4"],
+    "body": "<!-- _class: bg4 -->\n\n",
+    "description": "Définir l'arrière plan de la slide."
+  },
   "Font awesome icon": {
     "prefix": ["icon", "fa-icon"],
     "body": ["<i class='fas fa-$1'></i>$2"],

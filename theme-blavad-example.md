@@ -3,9 +3,9 @@ marp: true
 paginate: true
 
 theme: blavad
-title: POO
+title: blavad theme example
 
-footer: "POO Avancée"
+footer: "blavad theme example"
 _footer: ""
 ---
 
@@ -39,13 +39,15 @@ Explications
 
 # 01
 
-## Section 1
+## Exemple d'organisation d'une slide
 
 </div>
 
 ---
 
 ## Slides come here
+
+### **subtitle**
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. .
 
@@ -83,6 +85,8 @@ class MyClass:
 
 Duis aute irure dolor in reprehenderit.
 
+$f(t) = \frac{\sigma}{2}\int_{-\infty}^{x} t^2 dt$
+
 </div>
 
 </div></div>
@@ -94,24 +98,6 @@ Duis aute irure dolor in reprehenderit.
 <div class='main'>
 
 # 02
-
-## Section 2
-
-</div>
-
----
-
-## Slides come here
-
-### **subtitle**
-
----
-
-<!-- PARTIE 03 : Section 3 -->
-
-<div class='main'>
-
-# 03
 
 ## Snippets
 
