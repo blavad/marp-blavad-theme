@@ -18,7 +18,7 @@ _footer: ""
 
 <!-- TABLE DES MATIERES -->
 
-## Table des matières
+# Table des matières
 
 <b><span class='important'>01 </span>Section 1</b>
 Explications
@@ -45,9 +45,9 @@ Explications
 
 ---
 
-## Slides come here
+# Slides come here
 
-### **subtitle**
+## Subtitle
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. .
 
@@ -105,7 +105,9 @@ $f(t) = \frac{\sigma}{2}\int_{-\infty}^{x} t^2 dt$
 
 ---
 
-## Snippets
+# Snippets
+
+Voici la liste des <i class='important'>snippets</i> disponibles dans le fichier `snippets.json`
 
 - **emph** et **emphi** : Texte en couleur (bold ou italic)
 - **binfo** : block d'information
@@ -116,6 +118,7 @@ $f(t) = \frac{\sigma}{2}\int_{-\infty}^{x} t^2 dt$
 - **section** : nouvelle section
 - **cover** : nouvelle page de couverture
 - **table-of-content** : table des matières
+- **table-of-content-auto** : table des matières avec les sections
 - **lay-h2** : 2 colonnes
 - **lay-h2-custom** : 2 colonnes de taille inégales
 - **lay-h3** : 3 colonnes

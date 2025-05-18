@@ -1,9 +1,4 @@
 {
-  // Place your snippets for markdown here. Each snippet is defined under a snippet name and has a prefix, body and
-  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
-  // same ids are connected.
-  // Example:
   "Emphase text": {
     "prefix": "emph",
     "body": ["<b class='important'>$1</b>$2"],
@@ -65,6 +60,11 @@
     ],
     "description": "Definition block with title"
   },
+  "Flex center": {
+    "prefix": "center",
+    "body": ["<div class='flex-center'>\n\n$1\n\n</div>$2"],
+    "description": "Layout horizontal 2 blocks"
+  },
   "Horizontal layout 2": {
     "prefix": "lay-h2",
     "body": [
@@ -107,17 +107,13 @@
       "marp: true",
       "paginate: true",
       "",
-      "theme: $1",
-      "title: $2",
+      "theme: blavad",
+      "title: $1",
+      "math: mathjax",
       "",
-      "footer: '$3'",
+      "footer: '$1'",
       "_footer: ''",
-      "---\n\n$4",
-      "\n\n<script type='module'>",
-      "import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.0.0/dist/mermaid.esm.min.mjs';",
-      "mermaid.initialize({ startOnLoad: true });",
-      "window.addEventListener('vscode.markdown.updateContent', function() { mermaid.init() });",
-      "</script>"
+      "---\n\n$2"
     ],
     "description": "Première couverture  pour les diapos de cours (thème par défaut)"
   },
@@ -136,7 +132,7 @@
     "body": [
       "---",
       "",
-      "<!-- PARTIE ${1|01,02,03,04,05|} : ${2:Nom section} -->\n\n<div class='main'>\n\n# $1\n\n## ${2:Nom Section}\n\n</div>\n\n$3"
+      "<!-- PARTIE ${1|01,02,03,04,05|} : ${2:Nom section} -->\n\n<div id='${2:Nom Section}' class='main'>\n\n# $1\n\n## ${2:Nom Section}\n\n</div>\n\n$3"
     ],
     "description": "Crée une nouvelle page de section (thème par défaut)"
   },
@@ -144,26 +140,25 @@
     "prefix": ["tcontent", "table-of-content"],
     "body": [
       "---",
-      "",
-      "<!-- TABLE DES MATIERES -->\n\n## Table des matières\n\n<b><span class='important'>01 </span>${1:Section 1}</b>\n${2:Explications}\n\n<b><span class='important'>02 </span> ${3:Section 2}</b>\n${4:Explications}\n\n<b><span class='important'>03 </span> ${5:Section 3}</b>\n${6:Explications}\n\n<!-- FIN TABLE DES MATIERES -->\n\n$7"
+      "---\n\n<!-- _class: tableOfContent -->\n\n",
+      "<!-- TABLE DES MATIERES -->\n\n# Table des matières\n\n<a href='#${1:Section 1}'><b><span class='important'>01 </span>${1:Section 1}</b></a>\n${2:Explications}\n\n<a href='#${3:Section 2}'><b><span class='important'>02 </span> ${3:Section 2}</b></a>\n${4:Explications}\n\n<a href='#${5:Section 3}'><b><span class='important'>03 </span> ${5:Section 3}</b></a>\n${6:Explications}\n\n<!-- FIN TABLE DES MATIERES -->\n\n$7"
     ],
     "description": "Crée une nouvelle table des matières (thème par défaut)"
   },
   "Table of content with sections": {
     "prefix": ["tcontent-auto", "table-of-content-auto"],
     "body": [
-      "---",
-      "",
-      "<!-- TABLE DES MATIERES -->\n\n## Table des matières\n\n<b><span class='important'>01 </span>${1:Section 1}</b>\n${2:Explications}\n\n<b><span class='important'>02 </span> ${3:Section 2}</b>\n${4:Explications}\n\n<b><span class='important'>03 </span> ${5:Section 3}</b>\n${6:Explications}\n\n<!-- FIN TABLE DES MATIERES -->",
-      "---\n\n<!-- PARTIE 01 : $1 -->\n\n<div class='main'>\n\n# 01\n\n## $1\n\n</div>\n\n---\n\n ## ${7:Slides come here}\n\n",
-      "---\n\n<!-- PARTIE 02 : $3 -->\n\n<div class='main'>\n\n# 02\n\n## $3\n\n</div>\n\n---\n\n ## Slides come here\n\n",
-      "---\n\n<!-- PARTIE 03 : $5 -->\n\n<div class='main'>\n\n# 03\n\n## $5\n\n</div>\n\n---\n\n ## Slides come here\n\n"
+      "---\n\n<!-- _class: tableOfContent -->\n\n",
+      "<!-- TABLE DES MATIERES -->\n\n# Table des matières\n\n<a href='#${1:Section 1}'><b><span class='important'>01 </span>${1:Section 1}</b></a>\n${2:Explications}\n\n<a href='#${3:Section 2}'><b><span class='important'>02 </span> ${3:Section 2}</b></a>\n${4:Explications}\n\n<a href='#${5:Section 3}'><b><span class='important'>03 </span> ${5:Section 3}</b></a>\n${6:Explications}\n\n<!-- FIN TABLE DES MATIERES -->\n\n",
+      "---\n\n<!-- PARTIE 01 : $1 -->\n\n<div id='${1:Section 1}' class='main'>\n\n# 01\n\n## ${1:Section 1}\n\n</div>\n\n---\n\n # ${7:Slides come here}\n\n",
+      "---\n\n<!-- PARTIE 02 : $3 -->\n\n<div id='${3:Section 2}' class='main'>\n\n# 02\n\n## ${3:Section 2}\n\n</div>\n\n---\n\n # Slides come here\n\n",
+      "---\n\n<!-- PARTIE 03 : $5 -->\n\n<div id='${5:Section 3}' class='main'>\n\n# 03\n\n## ${5:Section 3}\n\n</div>\n\n---\n\n # Slides come here\n\n"
     ],
     "description": "Crée une nouvelle table des matières avec les sections associées (thème par défaut)"
   },
   "Slide": {
     "prefix": ["slide"],
-    "body": ["---\n\n## ${1:Title}\n\n"],
+    "body": ["---\n\n# ${1:Title}\n\n"],
     "description": "Crée une nouvelle slide"
   },
   "Background Cover": {
@@ -186,11 +181,6 @@
     "body": "<!-- _class: bg3 -->\n\n",
     "description": "Définir l'arrière plan de la slide."
   },
-  "Background 4": {
-    "prefix": ["bg4"],
-    "body": "<!-- _class: bg4 -->\n\n",
-    "description": "Définir l'arrière plan de la slide."
-  },
   "Font awesome icon": {
     "prefix": ["icon", "fa-icon"],
     "body": ["<i class='fas fa-$1'></i>$2"],
@@ -201,7 +191,7 @@
     "body": [
       "---",
       "marp: true",
-      "theme: blavad",
+      "theme: dav-default",
       "---",
       "",
       "<style>",

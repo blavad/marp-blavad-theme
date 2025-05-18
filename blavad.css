@@ -2,83 +2,237 @@
 
 /* @theme blavad */
 
-@import 'gaia';
+/* Import themes */
+@import 'gaiacss';
+
+/* Import icons */
 @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css';
+
+/* Import fonts */
 @import 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap';
+@import "https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap";
 
-/* Gaia styles */
+/* Declare variables */
 :root {
-  --white: #f0f2f5;
-  --black1: #070219;
-  --black2: #424867;
-  --red: 255, 36, 83;
-  --green: 27, 198, 95;
-  --blue: 32, 171, 243;
-  --yellow: 243, 202, 32;
-  --orange: 255, 125, 0;
+  --text-xs: 0.8rem;
+  --text-sm: 0.9rem;
+  --text-base: 1rem;
+  --text-lg: 1.2rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 1.8rem;
+  --text-3xl: 2.5rem;
+  --text-4xl: 3.5rem;
+  --text-5xl: 5rem;
 
-  --color-dimmed: var(--black2);
-  --color-highlight: rgb(var(--red));
-  --color-foreground: #070219;
+  --color-black: #070219;
+  --color-black-10: #0702191a;
+  --color-black-25: #07021940;
+  --color-black-50: #07021980;
+  --color-black-75: #070219c0;
+  --color-black-90: #070219e6;
 
-  --color-block: var(--black1);
-  --color-block2: rgba(0, 0, 0, 0.1);
+  --color-white: #ffffff;
+  --color-white-10: #ffffff1a;
+  --color-white-25: #ffffff40;
+  --color-white-50: #ffffff80;
+  --color-white-75: #ffffffc0;
+  --color-white-90: #ffffffe6;
+  --color-gray: rgba(147, 147, 147, 1);
 
-  --color-note: rgb(var(--blue));
-  --color-note2: rgba(var(--blue), 0.3);
+  --color-red: #ff2453;
+  --color-red-10: #ff24531a;
+  --color-red-25: #ff245340;
+  --color-red-50: #ff245380;
+  --color-red-75: #ff2453c0;
+  --color-red-c0: #ffffff;
+  --color-red-c50: #ffd5d9;
+  --color-red-c100: #ffafb9;
+  --color-red-c200: #ff8a9b;
+  --color-red-c300: #ff6681;
+  --color-red-c400: #ff4569;
+  --color-red-c500: var(--color-red);
+  --color-red-c600: #c0183d;
+  --color-red-c700: #83152c;
+  --color-red-c800: #420614;
+  --color-red-c900: #160007;
 
-  --color-success: rgb(var(--green));
-  --color-success2: rgba(var(--green), 0.3);
+  --color-yellow: #e9bc0c;
+  --color-yellow-10: #e9bc0c1a;
+  --color-yellow-25: #e9bc0c40;
+  --color-yellow-50: #e9bc0c80;
+  --color-yellow-75: #e9bc0cc0;
+  --color-yellow-c0: #ffffff;
+  --color-yellow-c50: #fffed4;
+  --color-yellow-c100: #fff9ad;
+  --color-yellow-c200: #fff188;
+  --color-yellow-c300: #fde764;
+  --color-yellow-c400: #f9da41;
+  --color-yellow-c500: var(--color-yellow);
+  --color-yellow-c600: #ba9a15;
+  --color-yellow-c700: #7e680c;
+  --color-yellow-c800: #483b05;
+  --color-yellow-c900: #241900;
 
-  --color-warning: rgb(var(--red));
-  --color-warning2: rgba(var(--red), 0.3);
+  --color-blue: #20abf3;
+  --color-blue-10: #20abf31a;
+  --color-blue-25: #20abf340;
+  --color-blue-50: #20abf380;
+  --color-blue-75: #20abf3c0;
+  --color-blue-c0: #ffffff;
+  --color-blue-c50: #d4ecff;
+  --color-blue-c100: #addcff;
+  --color-blue-c200: #88ceff;
+  --color-blue-c300: #64c1fd;
+  --color-blue-c400: #41b5f9;
+  --color-blue-c500: #20abf3;
+  --color-blue-c600: #1582ba;
+  --color-blue-c700: #0c587e;
+  --color-blue-c800: #052d41;
+  --color-blue-c900: rgb(7, 1, 31);
 
-  /* width: 1280px; */
-  /* height: 960px; */
+  --color-green: #1bc65f;
+  --color-green-10: #1bc65f1a;
+  --color-green-25: #1bc65f40;
+  --color-green-50: #1bc65f80;
+  --color-green-75: #1bc65fc0;
+  --color-green-c0: #ffffff;
+  --color-green-c50: #d4f8e7;
+  --color-green-c100: #adf0ce;
+  --color-green-c200: #87e7b4;
+  --color-green-c300: #62dd99;
+  --color-green-c400: #3ed27d;
+  --color-green-c500: #1bc65f;
+  --color-green-c600: #129747;
+  --color-green-c700: #0b672f;
+  --color-green-c800: #053518;
+  --color-green-c900: #001008;
+
+  --color-primary: var(--color-red);
+  --color-primary-10: var(--color-red-10);
+  --color-primary-25: var(--color-red-25);
+  --color-primary-50: var(--color-red-50);
+  --color-primary-75: var(--color-red-75);
+  --color-primary-c0: var(--color-red-c0);
+  --color-primary-c50: var(--color-red-c50);
+  --color-primary-c100: var(--color-red-c100);
+  --color-primary-c200: var(--color-red-c200);
+  --color-primary-c300: var(--color-red-c300);
+  --color-primary-c400: var(--color-red-c400);
+  --color-primary-c500: var(--color-red-c500);
+  --color-primary-c600: var(--color-red-c600);
+  --color-primary-c700: var(--color-red-c700);
+  --color-primary-c800: var(--color-red-c800);
+  --color-primary-c900: var(--color-red-c900);
+
+  --color-warning: var(--color-yellow);
+  --color-success: var(--color-green);
+  --color-error: #ff7d00;
+  --color-info: var(--color-blue);
+
+  --spacing-xs: 4px;
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 40px;
+
+  --border-xs: 6px;
+  --border-s: 10px;
+  --border-m: 14px;
+  --border-l: 20px;
+  --border-xl: 40px;
+  --border-xxl: 64px;
+
+  --font-sans: 'Inter', system-ui, Helvetica, sans-serif;
+  --font-serif: 'EB Garamond', serif;
+  --font-mono: "Space Mono", monospace;
+
+  --z-index-negative: -1;
+  --z-index-default: 0;
+  --z-index-absolute: 1;
+  --z-index-input: 20;
+  --z-index-popover: 30;
+  --z-index-tooltip: 40;
+  --z-index-header: 600;
+  --z-index-backdrop: 700;
+  --z-index-navigation: 800;
+  --z-index-modal: 900;
+  --z-index-toast: 1100;
+}
+
+
+/* Overrides Gaia styles */
+:root {
+  --color-dimmed: var(--color-black-75);
+  --color-highlight: var(--color-red);
+  --color-foreground: var(--color-black);
+
+  --color-background: var(--color-white);
+  --color-text: var(--color-foreground);
+
+  --color-block: var(--color-black);
+  --color-block2: var(--color-black-10);
+
+  --color-note: var(--color-blue);
+  --color-note2: var(--color-blue-25);
+
+  --color-success: var(--color-green);
+  --color-success2: var(--color-green-25);
+
+  --color-warning: var(--color-red);
+  --color-warning2: var(--color-red-25);
+
   font-size: 22px;
+  margin: 0;
   padding: 2rem;
-  font-family: 'Inter';
-  background-color: var(--white);
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-text);
 
   background-size: 110% 120%;
   background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/bg-slide1.png);
-  /* background-blend-mode: luminosity; */
 }
 
-section.cover,
-section.bg-cover {
-  font-size: 24px;
-  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/bg-cover.png);
+
+section h1 {
+  font-size: var(--text-xl);
 }
 
-section.bg2 {
-  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/bg-slide4.png);
+section h2 {
+  font-size: var(--text-lg);
 }
 
-section.bg3 {
-  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/bg-slide2.png);
-}
-
-section.huge {
-  font-size: 30px;
-}
-
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-}
-
-h3 {
-  margin: 0;
-  font-size: 1.2rem;
+section h3 {
+  font-size: var(--text-base);
   font-weight: bold;
 }
 
+section h4 {
+  font-size: var(--text-base);
+}
+
+section h5 {
+  font-size: var(--text-base);
+}
+
+section h6 {
+  font-size: var(--text-base);
+}
+
+section h1+h2 {
+  margin: 0;
+  color: var(--color-highlight);
+}
+
+
 p {
   text-align: justify;
+}
+
+section ul,
+section ol {
+  margin: 0.3rem 0;
 }
 
 
@@ -86,17 +240,36 @@ section::after {
   content: '' attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
 }
 
-
-section.sm-font-size {
-  font-size: 22px;
+section.tableOfContent a {
+  all: unset;
 }
 
-ul {
-  margin: 0;
+section.tableOfContent a:hover {
+  color: var(--color-highlight);
+  cursor: pointer;
+  text-decoration: underline;
 }
 
-pre {
-  margin-top: 0.4rem;
+.main {}
+
+.main>h1 {
+  position: absolute;
+  top: 11rem;
+  transform: translate(0, -50%);
+  font-size: var(--text-4xl);
+  color: var(--color-highlight);
+}
+
+.main>h2 {
+  position: absolute;
+  top: 16rem;
+  transform: translate(0, -50%);
+  font-size: var(--text-3xl);
+}
+
+section .main h1+h2 {
+  margin-top: 1rem;
+  color: var(--color-block);
 }
 
 .coverBlockCenter {
@@ -109,7 +282,7 @@ pre {
 .coverModuleName {
   color: #d8d8d8;
   font-weight: 300;
-  font-size: 1.1rem;
+  font-size: var(--text-lg);
   margin: 0;
   padding: 0;
 }
@@ -117,7 +290,7 @@ pre {
 .coverCourseName {
   color: #fff;
   font-weight: bold;
-  font-size: 3.2rem;
+  font-size: var(--text-4xl);
   margin: 0;
   padding: 0;
 }
@@ -126,7 +299,7 @@ pre {
 .coverAuthor {
   color: #d8d8d8;
   font-weight: 300;
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
   margin: 0;
   padding: 0;
 }
@@ -147,7 +320,7 @@ pre {
 .coverYear {
   color: #d8d8d8;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: var(--font-base);
 }
 
 
@@ -161,6 +334,13 @@ pre {
 .flex {
   flex: 1;
   padding-right: 2rem;
+}
+
+.flex-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .flex-sm {
@@ -189,9 +369,6 @@ pre {
   border-radius: 20px;
   border: 3px solid var(--color-block);
   background-color: var(--color-block2);
-  /* margin-top: 1rem;
-  padding: 0.5rem 1rem 1rem 1rem; */
-  /* font-size: 0.8rem; */
   margin-top: 1.2rem;
   padding: 0.8rem 1rem 1rem 1rem;
   font-size: 1rem;
@@ -203,9 +380,9 @@ pre {
 }
 
 .block-icon {
-  background-color: var(--white);
+  background-color: var(--color-white);
   border-radius: 100px;
-  border: 0.1rem solid var(--black1);
+  border: 0.1rem solid var(--color-black);
   padding: 0 1rem;
   min-width: 1.5rem;
   height: 1.5rem;
@@ -260,24 +437,174 @@ pre {
   width: 100%;
 }
 
-.main {}
-
-.main>h1 {
-  position: absolute;
-  top: 10rem;
-  transform: translate(0, -50%);
-  font-size: 4rem;
-  color: var(--color-highlight);
-}
-
-.main>h2 {
-  position: absolute;
-  top: 15rem;
-  transform: translate(0, -50%);
-  font-size: 2.5rem;
-}
 
 .mermaid {
   background: transparent;
   font-size: 10px;
+}
+
+/* Custom classes */
+section.cover,
+section.bg-cover {
+  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/bg-cover.png);
+}
+
+section.bg2 {
+  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/bg-slide4.png);
+}
+
+section.bg3 {
+  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/bg-slide2.png);
+}
+
+section.huge {
+  font-size: var(--text-3xl);
+}
+
+/* Customise code blocks */
+
+
+pre {
+  background-color: var(--color-black-90);
+  border-radius: var(--border-s);
+  border: 2px solid var(--color-black-25);
+  /* box-shadow: 0px 0px 6px var(--color-black-25); */
+  padding: 0.4rem 0.6rem;
+  margin: 0.5rem 0;
+}
+
+section code {
+  font-family: var(--font-mono);
+  padding: 0.1rem 0.5rem;
+  border-radius: var(--border-xs);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--color-white);
+  background: var(--color-black-75);
+}
+
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+}
+
+/* .hljs {
+  background: var(--color-black);
+  color: var(--color-white);
+} */
+
+.hljs-comment,
+.hljs-quote {
+  color: #aeaeae;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-type {
+  color: var(--color-red-c300);
+}
+
+.hljs-string {
+  color: var(--color-green-c300);
+}
+
+.hljs-subst {
+  color: #daefa3;
+}
+
+.hljs-link,
+.hljs-regexp {
+  color: #e9c062;
+}
+
+.hljs-name,
+.hljs-section,
+.hljs-tag,
+.hljs-title {
+  color: var(--color-blue-c400);
+}
+
+.hljs-class .hljs-title,
+.hljs-doctag,
+.hljs-title.class_ {
+  text-decoration: underline;
+}
+
+.hljs-bullet,
+.hljs-number,
+.hljs-symbol {
+  color: var(--color-blue-c500);
+}
+
+.hljs-params,
+.hljs-template-variable,
+.hljs-variable {
+  color: var(--color-blue-c200);
+}
+
+.hljs-attribute {
+  color: #cda869;
+}
+
+.hljs-meta {
+  color: #8996a8;
+}
+
+.hljs-formula {
+  background-color: #0e2231;
+  color: var(--color-black);
+  font-style: italic;
+}
+
+.hljs-addition {
+  background-color: #253b22;
+  color: var(--color-black);
+}
+
+.hljs-deletion {
+  background-color: #420e09;
+  color: var(--color-black);
+}
+
+.hljs-selector-class {
+  color: #9b703f;
+}
+
+.hljs-selector-id {
+  color: #8b98ab;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: 700;
+}
+
+
+section table thead {
+  background-color: var(--color-white-50);
+  font-weight: bold;
+  border: 2px solid var(--color-black-25);
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+
+section table tbody {
+  background-color: var(--color-white-50);
+  border: 2px solid var(--color-black-25);
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+section table th,
+section table td {
+  padding: 0.5rem 1rem;
+  border: none;
+}
+
+section table tbody>tr:nth-child(odd) td,
+section table tbody>tr:nth-child(odd) th {
+  background: var(--color-background-stripe, transparent);
 }
