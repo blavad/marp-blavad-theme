@@ -1,0 +1,28 @@
+/* blavad-v3.css */
+
+/* @theme blavad-v3 */
+
+/* Import themes */
+@import 'blavad-v2';
+
+/* Declare variables */
+:root {
+
+  --color-black-base: 0, 0, 0;
+  --color-white-base: 255, 255, 255;
+  --color-blue-base: 154, 86, 255;
+  --color-red-base: 255, 125, 0;
+  --color-green-base: 27, 198, 95;
+  --color-yellow-base: 255, 193, 7;
+  --color-orange-base: 255, 125, 0;
+
+  --color-primary-base: var(--color-blue-base);
+  --color-secondary-base: var(--color-orange-base);
+
+  --color-warning: var(--color-yellow);
+  --color-success: var(--color-green);
+  --color-error: var(--color-orange);
+  --color-info: var(--color-blue);
+
+  --color-background-cover: #222;
+}

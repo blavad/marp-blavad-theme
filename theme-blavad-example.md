@@ -2,7 +2,7 @@
 marp: true
 paginate: true
 
-theme: blavad
+theme: blavad-v3
 title: blavad theme example
 
 footer: "blavad theme example"
@@ -56,7 +56,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <b class='important'>Definition</b>
 Excepteur sint occaecat cupidatat non proident, **sunt in** culpa qui officia deserunt mollit anim id est laborum.
 
-<div class='block note'>
+<div class='block info'>
 
 <i class='block-icon fas fa-info'></i>
 
@@ -104,6 +104,8 @@ $f(t) = \frac{\sigma}{2}\int_{-\infty}^{x} t^2 dt$
 </div>
 
 ---
+
+<!-- _class: bg2 -->
 
 # Snippets
 
