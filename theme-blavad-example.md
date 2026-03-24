@@ -2,7 +2,7 @@
 marp: true
 paginate: true
 
-theme: blavad-v3
+theme: blavad
 title: blavad theme example
 
 footer: "blavad theme example"

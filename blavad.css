@@ -11,7 +11,6 @@
 /* Import fonts */
 @import 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap';
 @import "https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap";
-@import "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap";
 
 
 /* Declare variables */
@@ -26,126 +25,76 @@
   --text-4xl: 3.5rem;
   --text-5xl: 5rem;
 
-  --color-black: #070219;
-  --color-black-10: #0702191a;
-  --color-black-25: #07021940;
-  --color-black-50: #07021980;
-  --color-black-75: #070219c0;
-  --color-black-90: #070219e6;
+  --color-black-base: 7, 2, 25;
+  --color-black: rgb(var(--color-black-base));
+  --color-black-10: rgba(var(--color-black-base), 0.1);
+  --color-black-25: rgba(var(--color-black-base), 0.25);
+  --color-black-50: rgba(var(--color-black-base), 0.5);
+  --color-black-75: rgba(var(--color-black-base), 0.75);
+  --color-black-90: rgba(var(--color-black-base), 0.9);
 
-  --color-white: #ffffff;
-  --color-white-10: #ffffff1a;
-  --color-white-25: #ffffff40;
-  --color-white-50: #ffffff80;
-  --color-white-75: #ffffffc0;
-  --color-white-90: #ffffffe6;
-  --color-gray: rgba(147, 147, 147, 1);
+  --color-white-base: 255, 255, 255;
+  --color-white: rgb(var(--color-white-base));
+  --color-white-10: rgba(var(--color-white-base), 0.1);
+  --color-white-25: rgba(var(--color-white-base), 0.25);
+  --color-white-50: rgba(var(--color-white-base), 0.5);
+  --color-white-75: rgba(var(--color-white-base), 0.75);
+  --color-white-90: rgba(var(--color-white-base), 0.9);
 
-  --color-red: #ff2453;
-  --color-red-10: #ff24531a;
-  --color-red-25: #ff245340;
-  --color-red-50: #ff245380;
-  --color-red-75: #ff2453c0;
-  --color-red-c0: #ffffff;
-  --color-red-c50: #ffd5d9;
-  --color-red-c100: #ffafb9;
-  --color-red-c200: #ff8a9b;
-  --color-red-c300: #ff6681;
-  --color-red-c400: #ff4569;
-  --color-red-c500: var(--color-red);
-  --color-red-c600: #c0183d;
-  --color-red-c700: #83152c;
-  --color-red-c800: #420614;
-  --color-red-c900: #160007;
+  --color-red-base: 255, 36, 83;
+  --color-red: rgb(var(--color-red-base));
+  --color-red-10: rgba(var(--color-red-base), 0.1);
+  --color-red-25: rgba(var(--color-red-base), 0.25);
+  --color-red-50: rgba(var(--color-red-base), 0.5);
+  --color-red-75: rgba(var(--color-red-base), 0.75);
 
-  --color-yellow: #e9bc0c;
-  --color-yellow-10: #e9bc0c1a;
-  --color-yellow-25: #e9bc0c40;
-  --color-yellow-50: #e9bc0c80;
-  --color-yellow-75: #e9bc0cc0;
-  --color-yellow-c0: #ffffff;
-  --color-yellow-c50: #fffed4;
-  --color-yellow-c100: #fff9ad;
-  --color-yellow-c200: #fff188;
-  --color-yellow-c300: #fde764;
-  --color-yellow-c400: #f9da41;
-  --color-yellow-c500: var(--color-yellow);
-  --color-yellow-c600: #ba9a15;
-  --color-yellow-c700: #7e680c;
-  --color-yellow-c800: #483b05;
-  --color-yellow-c900: #241900;
 
-  --color-blue: #20abf3;
-  --color-blue-10: #20abf31a;
-  --color-blue-25: #20abf340;
-  --color-blue-50: #20abf380;
-  --color-blue-75: #20abf3c0;
-  --color-blue-c0: #ffffff;
-  --color-blue-c50: #d4ecff;
-  --color-blue-c100: #addcff;
-  --color-blue-c200: #88ceff;
-  --color-blue-c300: #64c1fd;
-  --color-blue-c400: #41b5f9;
-  --color-blue-c500: #20abf3;
-  --color-blue-c600: #1582ba;
-  --color-blue-c700: #0c587e;
-  --color-blue-c800: #052d41;
-  --color-blue-c900: rgb(7, 1, 31);
+  --color-yellow-base: 233, 188, 12;
+  --color-yellow: rgb(var(--color-yellow-base));
+  --color-yellow-10: rgba(var(--color-yellow-base), 0.1);
+  --color-yellow-25: rgba(var(--color-yellow-base), 0.25);
+  --color-yellow-50: rgba(var(--color-yellow-base), 0.5);
+  --color-yellow-75: rgba(var(--color-yellow-base), 0.75);
 
-  --color-green: #1bc65f;
-  --color-green-10: #1bc65f1a;
-  --color-green-25: #1bc65f40;
-  --color-green-50: #1bc65f80;
-  --color-green-75: #1bc65fc0;
-  --color-green-c0: #ffffff;
-  --color-green-c50: #d4f8e7;
-  --color-green-c100: #adf0ce;
-  --color-green-c200: #87e7b4;
-  --color-green-c300: #62dd99;
-  --color-green-c400: #3ed27d;
-  --color-green-c500: #1bc65f;
-  --color-green-c600: #129747;
-  --color-green-c700: #0b672f;
-  --color-green-c800: #053518;
-  --color-green-c900: #001008;
+  --color-blue-base: 32, 171, 243;
+  --color-blue: rgb(var(--color-blue-base));
+  --color-blue-10: rgba(var(--color-blue-base), 0.1);
+  --color-blue-25: rgba(var(--color-blue-base), 0.25);
+  --color-blue-50: rgba(var(--color-blue-base), 0.5);
+  --color-blue-75: rgba(var(--color-blue-base), 0.75);
 
-  --color-primary: var(--color-red);
-  --color-primary-10: var(--color-red-10);
-  --color-primary-25: var(--color-red-25);
-  --color-primary-50: var(--color-red-50);
-  --color-primary-75: var(--color-red-75);
-  --color-primary-c0: var(--color-red-c0);
-  --color-primary-c50: var(--color-red-c50);
-  --color-primary-c100: var(--color-red-c100);
-  --color-primary-c200: var(--color-red-c200);
-  --color-primary-c300: var(--color-red-c300);
-  --color-primary-c400: var(--color-red-c400);
-  --color-primary-c500: var(--color-red-c500);
-  --color-primary-c600: var(--color-red-c600);
-  --color-primary-c700: var(--color-red-c700);
-  --color-primary-c800: var(--color-red-c800);
-  --color-primary-c900: var(--color-red-c900);
+  --color-green-base: 27, 198, 95;
+  --color-green: rgb(var(--color-green-base));
+  --color-green-10: rgba(var(--color-green-base), 0.1);
+  --color-green-25: rgba(var(--color-green-base), 0.25);
+  --color-green-50: rgba(var(--color-green-base), 0.5);
+  --color-green-75: rgba(var(--color-green-base), 0.75);
 
-  --color-orange: #ff7d00;
-  --color-orange-10: #ff7d001a;
-  --color-orange-25: #ff7d0040;
-  --color-orange-50: #ff7d0080;
-  --color-orange-75: #ff7d00c0;
-  --color-orange-c0: #ffffff;
-  --color-orange-c50: #ffd5b3;
-  --color-orange-c100: #ffb380;
-  --color-orange-c200: #ff8a4d;
-  --color-orange-c300: #ff6f1a;
-  --color-orange-c400: #ff5a00;
-  --color-orange-c500: var(--color-orange);
-  --color-orange-c600: #c04a00;
-  --color-orange-c700: #832f00;
-  --color-orange-c800: #421500;
-  --color-orange-c900: #160700;
+  --color-orange-base: 255, 125, 0;
+  --color-orange: rgb(var(--color-orange-base));
+  --color-orange-10: rgba(var(--color-orange-base), 0.1);
+  --color-orange-25: rgba(var(--color-orange-base), 0.25);
+  --color-orange-50: rgba(var(--color-orange-base), 0.5);
+  --color-orange-75: rgba(var(--color-orange-base), 0.75);
+
+  --color-primary-base: var(--color-red-base);
+  --color-primary: rgb(var(--color-primary-base));
+  --color-primary-10: rgba(var(--color-primary-base), 0.1);
+  --color-primary-25: rgba(var(--color-primary-base), 0.25);
+  --color-primary-50: rgba(var(--color-primary-base), 0.5);
+  --color-primary-75: rgba(var(--color-primary-base), 0.75);
+
+  --color-secondary-base: var(--color-blue-base);
+  --color-secondary: rgb(var(--color-secondary-base));
+  --color-secondary-10: rgba(var(--color-secondary-base), 0.1);
+  --color-secondary-25: rgba(var(--color-secondary-base), 0.25);
+  --color-secondary-50: rgba(var(--color-secondary-base), 0.5);
+  --color-secondary-75: rgba(var(--color-secondary-base), 0.75);
+
 
   --color-warning: var(--color-yellow);
   --color-success: var(--color-green);
-  --color-error: #ff7d00;
+  --color-error: var(--color-orange);
   --color-info: var(--color-blue);
 
   --spacing-xs: 4px;
@@ -163,16 +112,13 @@
   --border-xxl: 64px;
 
   --font-sans: 'Inter', system-ui, Helvetica, sans-serif;
-  --font-serif: 'EB Garamond', serif;
   --font-mono: "Space Mono", monospace;
 }
 
-
-/* Overrides Gaia styles */
 :root {
   --color-dimmed: var(--color-black-75);
-  --color-highlight: var(--color-red);
   --color-foreground: var(--color-black);
+  --color-highlight: var(--color-primary);
 
   --color-background: var(--color-white);
   --color-text: var(--color-foreground);
@@ -180,29 +126,17 @@
   --color-block: var(--color-black);
   --color-block2: var(--color-black-10);
 
-  --color-note: var(--color-blue);
-  --color-note2: var(--color-blue-25);
-
-  --color-error: var(--color-orange);
-  --color-error2: var(--color-orange-25);
-
-  --color-success: var(--color-green);
-  --color-success2: var(--color-green-25);
-
-  --color-warning: var(--color-red);
-  --color-warning2: var(--color-red-25);
-
   font-size: 22px;
   margin: 0;
   padding: 2rem;
   font-family: var(--font-sans);
-  background-color: var(--color-background);
   color: var(--color-text);
-
   background-size: 110% 120%;
-  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/bg-1.png);
 }
 
+section {
+  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/bg-1.png);
+}
 
 /* Custom classes */
 section.cover,
@@ -266,6 +200,11 @@ section ol {
   margin: 0.3rem 0;
 }
 
+
+section::after {
+  content: '' attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+}
+
 section.tableOfContent a {
   all: unset;
 }
@@ -276,7 +215,6 @@ section.tableOfContent a:hover {
   text-decoration: underline;
 }
 
-.main {}
 
 .main>h1 {
   position: absolute;
@@ -349,8 +287,6 @@ section .main h1+h2 {
   font-size: var(--font-base);
 }
 
-
-
 .flex-horizontal {
   flex: 1;
   display: flex;
@@ -392,7 +328,7 @@ section .main h1+h2 {
 }
 
 .info {
-  color: var(--color-note);
+  color: var(--color-info);
   ;
 }
 
@@ -401,7 +337,7 @@ section .main h1+h2 {
 }
 
 .bg-important {
-  background-color: var(--color-warning);
+  background-color: var(--color-primary);
 }
 
 .bg-success {
@@ -409,29 +345,30 @@ section .main h1+h2 {
 }
 
 .bg-info {
-  background-color: var(--color-note);
+  background-color: var(--color-info);
 }
 
 .bg-error {
-  background-color: var(--color-error)
+  background-color: var(--color-error);
 }
 
 .bg-important-50 {
-  background-color: var(--color-red-75);
+  background-color: var(--color-primary-25);
 }
 
 .bg-success-50 {
-  background-color: var(--color-success2);
+  background-color: var(--color-green-25);
 }
 
 .bg-info-50 {
-  background-color: var(--color-note2);
+  background-color: var(--color-blue-25);
 }
 
 
 .block {
   position: relative;
   border-radius: 20px;
+  color: var(--color-text);
   border: 3px solid var(--color-block);
   background-color: var(--color-block2);
   margin-top: 1.2rem;
@@ -455,7 +392,6 @@ section .main h1+h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* top: -12px; */
   top: -16px;
   left: -12px;
   font-size: 0.8rem;
@@ -474,25 +410,29 @@ section .main h1+h2 {
   font-size: 0.7rem;
 }
 
-.block.note {
-  border: 3px solid var(--color-note);
-  background-color: var(--color-note2);
+.block.note,
+.block.info,
+.block.blue {
+  border: 3px solid var(--color-blue);
+  background-color: var(--color-blue-25);
 }
 
-.block.green {
-  border: 3px solid var(--color-success);
-  background-color: var(--color-success2);
+.block.green,
+.block.success {
+  border: 3px solid var(--color-green);
+  background-color: var(--color-green-25);
 }
 
-.block.orange {
-  border: 3px solid var(--color-error);
-  background-color: var(--color-error2);
+.block.orange,
+.block.error {
+  border: 3px solid var(--color-orange);
+  background-color: var(--color-orange-25);
 }
 
-
+.block.red,
 .block.warning {
-  border: 3px solid var(--color-warning);
-  background-color: var(--color-warning2);
+  border: 3px solid var(--color-red);
+  background-color: var(--color-red-25);
 }
 
 .w33 {
@@ -513,12 +453,11 @@ section .main h1+h2 {
   font-size: 10px;
 }
 
-/* Customise code blocks */
+
 pre {
   background-color: var(--color-black-90);
   border-radius: var(--border-s);
   border: 2px solid var(--color-black-25);
-  /* box-shadow: 0px 0px 6px var(--color-black-25); */
   padding: 0.4rem 0.6rem;
   margin: 0.5rem 0;
 }
@@ -552,11 +491,11 @@ pre code.hljs {
 .hljs-keyword,
 .hljs-selector-tag,
 .hljs-type {
-  color: var(--color-red-c300);
+  color: #ff6681;
 }
 
 .hljs-string {
-  color: var(--color-green-c300);
+  color: #62dd99;
 }
 
 .hljs-subst {
@@ -572,8 +511,9 @@ pre code.hljs {
 .hljs-section,
 .hljs-tag,
 .hljs-title {
-  color: var(--color-blue-c400);
+  color: #41b5f9;
 }
+
 
 .hljs-class .hljs-title,
 .hljs-doctag,
@@ -584,13 +524,13 @@ pre code.hljs {
 .hljs-bullet,
 .hljs-number,
 .hljs-symbol {
-  color: var(--color-blue-c500);
+  color: #20abf3;
 }
 
 .hljs-params,
 .hljs-template-variable,
 .hljs-variable {
-  color: var(--color-blue-c200);
+  color: #88ceff;
 }
 
 .hljs-attribute {
@@ -663,8 +603,6 @@ section table tbody>tr:nth-child(odd) td,
 section table tbody>tr:nth-child(odd) th {
   background: var(--color-background-stripe, transparent);
 }
-
-
 
 button {
   background-color: var(--color-primary);
