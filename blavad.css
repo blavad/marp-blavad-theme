@@ -91,11 +91,40 @@
   --color-secondary-50: rgba(var(--color-secondary-base), 0.5);
   --color-secondary-75: rgba(var(--color-secondary-base), 0.75);
 
+  --color-success-base: var(--color-green-base);
+  --color-success: rgb(var(--color-success-base));
+  --color-success-10: rgba(var(--color-success-base), 0.1);
+  --color-success-25: rgba(var(--color-success-base), 0.25);
+  --color-success-50: rgba(var(--color-success-base), 0.5);
+  --color-success-75: rgba(var(--color-success-base), 0.75);
 
-  --color-warning: var(--color-yellow);
-  --color-success: var(--color-green);
-  --color-error: var(--color-orange);
-  --color-info: var(--color-blue);
+  --color-info-base: var(--color-blue-base);
+  --color-info: rgb(var(--color-info-base));
+  --color-info-10: rgba(var(--color-info-base), 0.1);
+  --color-info-25: rgba(var(--color-info-base), 0.25);
+  --color-info-50: rgba(var(--color-info-base), 0.5);
+  --color-info-75: rgba(var(--color-info-base), 0.75);
+
+  --color-warning-base: var(--color-yellow-base);
+  --color-warning: rgb(var(--color-warning-base));
+  --color-warning-10: rgba(var(--color-warning-base), 0.1);
+  --color-warning-25: rgba(var(--color-warning-base), 0.25);
+  --color-warning-50: rgba(var(--color-warning-base), 0.5);
+  --color-warning-75: rgba(var(--color-warning-base), 0.75);
+
+  --color-error-base: var(--color-orange-base);
+  --color-error: rgb(var(--color-error-base));
+  --color-error-10: rgba(var(--color-error-base), 0.1);
+  --color-error-25: rgba(var(--color-error-base), 0.25);
+  --color-error-50: rgba(var(--color-error-base), 0.5);
+  --color-error-75: rgba(var(--color-error-base), 0.75);
+
+  --color-block-base: var(--color-black-base);
+  --color-block: rgb(var(--color-block-base));
+  --color-block-10: rgba(var(--color-block-base), 0.1);
+  --color-block-25: rgba(var(--color-block-base), 0.25);
+  --color-block-50: rgba(var(--color-block-base), 0.5);
+  --color-block-75: rgba(var(--color-block-base), 0.75);
 
   --spacing-xs: 4px;
   --spacing-s: 8px;
@@ -122,9 +151,6 @@
 
   --color-background: var(--color-white);
   --color-text: var(--color-foreground);
-
-  --color-block: var(--color-black);
-  --color-block2: var(--color-black-10);
 
   font-size: 22px;
   margin: 0;
@@ -187,7 +213,7 @@ section h6 {
 
 section h1+h2 {
   margin: 0;
-  color: var(--color-highlight);
+  color: var(--color-primary);
 }
 
 
@@ -210,7 +236,7 @@ section.tableOfContent a {
 }
 
 section.tableOfContent a:hover {
-  color: var(--color-highlight);
+  color: var(--color-primary);
   cursor: pointer;
   text-decoration: underline;
 }
@@ -221,7 +247,7 @@ section.tableOfContent a:hover {
   top: 11rem;
   transform: translate(0, -50%);
   font-size: var(--text-4xl);
-  color: var(--color-highlight);
+  color: var(--color-primary);
 }
 
 .main>h2 {
@@ -320,7 +346,7 @@ section .main h1+h2 {
 }
 
 .important {
-  color: var(--color-highlight);
+  color: var(--color-primary);
 }
 
 .success {
@@ -329,7 +355,10 @@ section .main h1+h2 {
 
 .info {
   color: var(--color-info);
-  ;
+}
+
+.warning {
+  color: var(--color-warning);
 }
 
 .error {
@@ -348,6 +377,10 @@ section .main h1+h2 {
   background-color: var(--color-info);
 }
 
+.bg-warning {
+  background-color: var(--color-warning);
+}
+
 .bg-error {
   background-color: var(--color-error);
 }
@@ -364,13 +397,20 @@ section .main h1+h2 {
   background-color: var(--color-blue-25);
 }
 
+.bg-warning-50 {
+  background-color: var(--color-orange-25);
+}
+
+.bg-error {
+  background-color: var(--color-error-25);
+}
 
 .block {
   position: relative;
   border-radius: 20px;
   color: var(--color-text);
   border: 3px solid var(--color-block);
-  background-color: var(--color-block2);
+  background-color: var(--color-block-10);
   margin-top: 1.2rem;
   padding: 0.8rem 1rem 1rem 1rem;
   font-size: 1rem;
@@ -411,8 +451,18 @@ section .main h1+h2 {
 }
 
 .block.note,
-.block.info,
-.block.blue {
+.block.primary {
+  border: 3px solid var(--color-primary);
+  background-color: var(--color-primary-25);
+}
+
+.block.secondary {
+  border: 3px solid var(--color-secondary);
+  background-color: var(--color-secondary-25);
+}
+
+.block.blue,
+.block.info {
   border: 3px solid var(--color-blue);
   background-color: var(--color-blue-25);
 }

@@ -19,16 +19,44 @@
   "Information block": {
     "prefix": "binfo",
     "body": [
-      "<div class='block note'>\n\n<i class='block-icon fas fa-info'></i>\n\n$1\n\n</div>$2"
+      "<div class='block info'>\n\n<i class='block-icon fas fa-info'></i>\n\n$1\n\n</div>$2"
     ],
     "description": "Information block"
+  },
+  "Primary block": {
+    "prefix": "bprimary",
+    "body": [
+      "<div class='block primary no-icon'>\n\n$1\n\n</div>$2"
+    ],
+    "description": "Primary block without icon"
+  },
+  "Primary block with icon": {
+    "prefix": "bprimary-icon",
+    "body": [
+      "<div class='block primary'>\n\n<i class='block-icon fas fa-info'></i>\n\n$1\n\n</div>$2"
+    ],
+    "description": "Primary block with icon"
+  },
+  "Secondary block": {
+    "prefix": "bsecondary",
+    "body": [
+      "<div class='block secondary no-icon'>\n\n$1\n\n</div>$2"
+    ],
+    "description": "Secondary block without icon"
+  },
+  "Secondary block with icon": {
+    "prefix": "bsecondary-icon",
+    "body": [
+      "<div class='block secondary'>\n\n<i class='block-icon fas fa-info'></i>\n\n$1\n\n</div>$2"
+    ],
+    "description": "Secondary block with icon"
   },
   "Warning block": {
     "prefix": "bwarn",
     "body": [
       "<div class='block warning'>\n\n<i class='block-icon fas fa-exclamation'></i>\n\n$1\n\n</div>$2"
     ],
-    "description": "Information block"
+    "description": "Warning block"
   },
   "Block with title": {
     "prefix": "bstd-title",
