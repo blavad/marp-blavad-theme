@@ -7,7 +7,7 @@
 
 /* Declare variables */
 :root {
-  --color-black-base: 0, 0, 0;
+  --color-black-base: 16, 16, 16;
   --color-white-base: 255, 255, 255;
   --color-blue-base: 154, 86, 255;
   --color-red-base: 255, 125, 0;
@@ -17,11 +17,23 @@
 
   --color-primary-base: var(--color-blue-base);
   --color-secondary-base: var(--color-orange-base);
+}
 
-  --color-warning: var(--color-yellow);
-  --color-success: var(--color-green);
-  --color-error: var(--color-orange);
-  --color-info: var(--color-blue);
 
-  --color-background-cover: #222;
+section {
+  background-image: url(./assets/img/blavad-v2/bg-1.png);
+}
+
+/* Custom classes */
+section.cover,
+section.bg-cover {
+  background-image: url(./assets/img/blavad-v2/bg-cover.png);
+}
+
+section.bg2 {
+  background-image: url(./assets/img/blavad-v2/bg-2.png);
+}
+
+section.bg3 {
+  background-image: url(./assets/img/blavad-v2/bg-3.png);
 }

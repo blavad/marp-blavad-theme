@@ -285,3 +285,86 @@ Right section
 
 </div>
 ```
+
+---
+
+## Thème customisé
+
+### Étape 1 — Générer les images de fond
+
+Utilisez le script `generate_bg.py` en spécifiant vos couleurs primaire et secondaire :
+
+```bash
+python generate_bg.py \
+  --primary "#9a56ff" \
+  --secondary "#ff7d00" \
+  --output assets/img/my-theme
+```
+
+Cela génère dans le dossier de sortie les fichiers suivants :
+
+| Fichier        | Usage                          |
+| -------------- | ------------------------------ |
+| `bg-1.png`     | Fond des slides standard       |
+| `bg-2.png`     | Fond alternatif (`bg2`)        |
+| `bg-3.png`     | Fond alternatif (`bg3`)        |
+| `bg-cover.png` | Fond de la slide de couverture |
+
+---
+
+# Thème customisé
+
+## Étape 2 — Créer le fichier `custom-theme.css`
+
+Créez un fichier `custom-theme.css` :
+
+```css
+/* custom-theme.css */
+/* @theme custom-theme */
+@import "blavad";
+
+/* Redéfinition des couleurs */
+:root {
+  --color-black-base: 16, 16, 16;
+  --color-white-base: 255, 255, 255;
+  --color-blue-base: 154, 86, 255;
+  --color-red-base: 255, 125, 0;
+  --color-green-base: 27, 198, 95;
+  --color-yellow-base: 255, 193, 7;
+  --color-orange-base: 255, 125, 0;
+
+  --color-primary-base: var(--color-blue-base);
+  --color-secondary-base: var(--color-orange-base);
+}
+/* .... */
+```
+
+---
+
+```css
+/* Redéfinition des images de fond */
+section {
+  background-image: url(./assets/img/my-theme/bg-1.png);
+}
+
+section.cover,
+section.bg-cover {
+  background-image: url(./assets/img/my-theme/bg-cover.png);
+}
+
+section.bg2 {
+  background-image: url(./assets/img/my-theme/bg-2.png);
+}
+
+section.bg3 {
+  background-image: url(./assets/img/my-theme/bg-3.png);
+}
+```
+
+Déclarez ensuite le thème dans votre présentation :
+
+```yaml
+---
+theme: custom-theme
+---
+```

@@ -6,14 +6,25 @@ from two theme colors (primary and secondary) et light/dark colors.
 Usage:
   python generate_bg.py
   python generate_bg.py --primary "#ff2453" --secondary "#20abf3"
+  python generate_bg.py --primary "255,36,83" --secondary "32,171,243"
   python generate_bg.py --primary "#7c3aed" --secondary "#0ea5e9" --output assets/img
   python generate_bg.py --primary "#7c3aed" --secondary "#0ea5e9" --light "#ffffff" --dark "#070219" --output assets/img
+  python generate_bg.py --primary "124,58,237" --secondary "14,165,233" --light "255,255,255" --dark "7,2,25"
 """
 
 import argparse
 import os
 import numpy as np
 from PIL import Image, ImageFilter
+
+
+def parse_color(color: str) -> tuple[int, int, int]:
+    """Accept either hex '#rrggbb' or RGB '155,255,0' format."""
+    color = color.strip()
+    if "," in color:
+        parts = [int(x.strip()) for x in color.split(",")]
+        return tuple(parts)
+    return hex_to_rgb(color)
 
 
 def hex_to_rgb(hex_color: str) -> tuple[int, int, int]:
@@ -66,10 +77,10 @@ def generate(
     output_dir: str = ".",
 ):
     w, h = size
-    p = hex_to_rgb(primary)
-    s = hex_to_rgb(secondary)
-    light_rgb = hex_to_rgb(light)
-    dark_rgb = hex_to_rgb(dark)
+    p = parse_color(primary)
+    s = parse_color(secondary)
+    light_rgb = parse_color(light)
+    dark_rgb = parse_color(dark)
 
     # Each variant: list of (center_fx, center_fy, radius_fw, color, opacity)
     # Positions expressed as fractions of width/height
