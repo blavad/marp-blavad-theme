@@ -56,7 +56,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <b class='important'>Definition</b>
 Excepteur sint occaecat cupidatat non proident, **sunt in** culpa qui officia deserunt mollit anim id est laborum.
 
-<div class='block info'>
+<div class='block note'>
 
 <i class='block-icon fas fa-info'></i>
 

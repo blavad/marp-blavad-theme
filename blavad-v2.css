@@ -11,7 +11,6 @@
 /* Import fonts */
 @import 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap';
 @import "https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap";
-@import "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap";
 
 
 /* Declare variables */
@@ -42,7 +41,7 @@
   --color-white-75: rgba(var(--color-white-base), 0.75);
   --color-white-90: rgba(var(--color-white-base), 0.9);
 
-  --color-red-base: 255, 86, 123;
+  --color-red-base: 25p5, 86, 123;
   --color-red: rgb(var(--color-red-base));
   --color-red-10: rgba(var(--color-red-base), 0.1);
   --color-red-25: rgba(var(--color-red-base), 0.25);
@@ -113,7 +112,6 @@
   --border-xxl: 64px;
 
   --font-sans: 'Inter', system-ui, Helvetica, sans-serif;
-  --font-serif: 'EB Garamond', serif;
   --font-mono: "Space Mono", monospace;
 }
 
@@ -124,7 +122,6 @@
 
   --color-background: var(--color-white);
   --color-text: var(--color-foreground);
-  --color-background-cover: var(--color-black);
 
   --color-block: var(--color-black);
   --color-block2: var(--color-black-10);
@@ -135,21 +132,26 @@
   font-family: var(--font-sans);
   color: var(--color-text);
   background-size: 110% 120%;
+  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/bg-1.png);
 }
 
-section {
-  isolation: isolate;
+
+/* Custom classes */
+section.cover,
+section.bg-cover {
+  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/bg-cover.png);
 }
 
-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle 200px at 70% 70%, var(--color-secondary-50) 0%, var(--color-secondary-25) 50%, transparent 100%),
-    radial-gradient(circle 230px at 95% 60%, var(--color-primary-50) 0%, var(--color-primary-25) 50%, transparent 100%);
-  pointer-events: none;
-  z-index: -1;
+section.bg2 {
+  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/bg-2.png);
+}
+
+section.bg3 {
+  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/bg-3.png);
+}
+
+section.huge {
+  font-size: 24px;
 }
 
 section::after {
@@ -447,40 +449,6 @@ section .main h1+h2 {
 .mermaid {
   background: transparent;
   font-size: 10px;
-}
-
-section.cover,
-section.bg-cover {
-  background-color: var(--color-background-cover);
-  /* background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/bg-cover.png); */
-}
-
-section.cover::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle 400px at 50% 120%, var(--color-secondary-50) 0%, var(--color-secondary-25) 65%, transparent 100%),
-    radial-gradient(circle 560px at 50% 110%, var(--color-primary-50) 0%, var(--color-primary-25) 60%, transparent 100%);
-  pointer-events: none;
-  z-index: -1;
-}
-
-section.bg2::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle 150px at 97% 97%, var(--color-secondary-50) 0%, var(--color-secondary-25) 75%, transparent 100%),
-    radial-gradient(circle 150px at 3% 97%, var(--color-primary-50) 0%, var(--color-primary-25) 75%, transparent 100%);
-  /* filter: blur(80px); */
-  pointer-events: none;
-  z-index: -1;
-}
-
-
-section.huge {
-  font-size: 24px;
 }
 
 

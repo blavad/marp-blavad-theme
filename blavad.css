@@ -204,6 +204,28 @@
 }
 
 
+/* Custom classes */
+section.cover,
+section.bg-cover {
+  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/bg-cover.png);
+}
+
+section.bg2 {
+  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/bg-2.png);
+}
+
+section.bg3 {
+  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/bg-3.png);
+}
+
+section.huge {
+  font-size: 24px;
+}
+
+section::after {
+  content: '' attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+}
+
 section h1 {
   font-size: var(--text-xl);
 }
@@ -242,11 +264,6 @@ p {
 section ul,
 section ol {
   margin: 0.3rem 0;
-}
-
-
-section::after {
-  content: '' attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
 }
 
 section.tableOfContent a {
@@ -496,27 +513,7 @@ section .main h1+h2 {
   font-size: 10px;
 }
 
-/* Custom classes */
-section.cover,
-section.bg-cover {
-  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/bg-cover.png);
-}
-
-section.bg2 {
-  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/bg-2.png);
-}
-
-section.bg3 {
-  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/bg-3.png);
-}
-
-section.huge {
-  font-size: 24px;
-}
-
 /* Customise code blocks */
-
-
 pre {
   background-color: var(--color-black-90);
   border-radius: var(--border-s);
