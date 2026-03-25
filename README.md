@@ -66,8 +66,8 @@ Use the `generate_bg.py` script by specifying your primary and secondary colors:
 
 ```bash
 python generate_bg.py \
-  --primary "#9a56ff" \
-  --secondary "#ff7d00" \
+  --primary "154,86,255" \
+  --secondary "255,125,0" \
   --output assets/img/my-theme
 ```
 
