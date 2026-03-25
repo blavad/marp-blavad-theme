@@ -105,7 +105,7 @@
   --color-info-50: rgba(var(--color-info-base), 0.5);
   --color-info-75: rgba(var(--color-info-base), 0.75);
 
-  --color-warning-base: var(--color-yellow-base);
+  --color-warning-base: var(--color-red-base);
   --color-warning: rgb(var(--color-warning-base));
   --color-warning-10: rgba(var(--color-warning-base), 0.1);
   --color-warning-25: rgba(var(--color-warning-base), 0.25);
@@ -349,6 +349,14 @@ section .main h1+h2 {
   color: var(--color-primary);
 }
 
+.primary {
+  color: var(--color-primary);
+}
+
+.secondary {
+  color: var(--color-secondary);
+}
+
 .success {
   color: var(--color-success);
 }
@@ -363,6 +371,15 @@ section .main h1+h2 {
 
 .error {
   color: var(--color-error)
+}
+
+.bg-important,
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
 }
 
 .bg-important {
@@ -383,26 +400,6 @@ section .main h1+h2 {
 
 .bg-error {
   background-color: var(--color-error);
-}
-
-.bg-important-50 {
-  background-color: var(--color-primary-25);
-}
-
-.bg-success-50 {
-  background-color: var(--color-green-25);
-}
-
-.bg-info-50 {
-  background-color: var(--color-blue-25);
-}
-
-.bg-warning-50 {
-  background-color: var(--color-orange-25);
-}
-
-.bg-error {
-  background-color: var(--color-error-25);
 }
 
 .block {
@@ -450,7 +447,6 @@ section .main h1+h2 {
   font-size: 0.7rem;
 }
 
-.block.note,
 .block.primary {
   border: 3px solid var(--color-primary);
   background-color: var(--color-primary-25);
@@ -461,28 +457,45 @@ section .main h1+h2 {
   background-color: var(--color-secondary-25);
 }
 
-.block.blue,
-.block.info {
+.block.blue {
   border: 3px solid var(--color-blue);
   background-color: var(--color-blue-25);
 }
 
-.block.green,
-.block.success {
+.block.green {
   border: 3px solid var(--color-green);
   background-color: var(--color-green-25);
 }
 
-.block.orange,
-.block.error {
+.block.orange {
   border: 3px solid var(--color-orange);
   background-color: var(--color-orange-25);
 }
 
-.block.red,
-.block.warning {
+.block.red {
   border: 3px solid var(--color-red);
   background-color: var(--color-red-25);
+}
+
+.block.note,
+.block.info {
+  border: 3px solid var(--color-info);
+  background-color: var(--color-info-25);
+}
+
+.block.success {
+  border: 3px solid var(--color-success);
+  background-color: var(--color-success-25);
+}
+
+.block.error {
+  border: 3px solid var(--color-error);
+  background-color: var(--color-error-25);
+}
+
+.block.warning {
+  border: 3px solid var(--color-warning);
+  background-color: var(--color-warning-25);
 }
 
 .w33 {
