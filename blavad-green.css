@@ -25,19 +25,19 @@
 
 
 section {
-  background-image: url(assets/img/blavad-green/bg-1.png);
+  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/blavad-green/bg-1.png);
 }
 
 /* Custom classes */
 section.cover,
 section.bg-cover {
-  background-image: url(assets/img/blavad-green/bg-cover.png);
+  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/blavad-green/bg-cover.png);
 }
 
 section.bg2 {
-  background-image: url(assets/img/blavad-green/bg-2.png);
+  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/blavad-green/bg-2.png);
 }
 
 section.bg3 {
-  background-image: url(assets/img/blavad-green/bg-3.png);
+  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/blavad-green/bg-3.png);
 }
