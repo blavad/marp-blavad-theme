@@ -1,0 +1,43 @@
+/* blavad-green.css */
+
+/* @theme blavad-green */
+
+/* Import themes */
+@import 'blavad';
+
+/* Declare variables */
+:root {
+  --color-black-base: 51, 47, 47;
+  --color-white-base: 249, 247, 247;
+  --color-blue-base: 32, 178, 214;
+  --color-purple-base: 154, 86, 255;
+  --color-red-base: 255, 86, 123;
+  --color-green-base: 26, 195, 122;
+  --color-yellow-base: 255, 193, 7;
+  --color-orange-base: 255, 125, 0;
+
+  --color-primary-base: var(--color-green-base);
+  --color-secondary-base: var(--color-yellow-base);
+  --color-info-base: var(--color-primary-base);
+  --color-warning-base: var(--color-secondary-base);
+
+}
+
+
+section {
+  background-image: url(assets/img/blavad-green/bg-1.png);
+}
+
+/* Custom classes */
+section.cover,
+section.bg-cover {
+  background-image: url(assets/img/blavad-green/bg-cover.png);
+}
+
+section.bg2 {
+  background-image: url(assets/img/blavad-green/bg-2.png);
+}
+
+section.bg3 {
+  background-image: url(assets/img/blavad-green/bg-3.png);
+}

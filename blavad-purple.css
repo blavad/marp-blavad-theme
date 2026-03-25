@@ -1,6 +1,6 @@
-/* blavad-v2.css */
+/* blavad-purple.css */
 
-/* @theme blavad-v2 */
+/* @theme blavad-purple */
 
 /* Import themes */
 @import 'blavad';
@@ -24,19 +24,19 @@
 
 
 section {
-  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/blavad-v2/bg-1.png);
+  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/blavad-purple/bg-1.png);
 }
 
 /* Custom classes */
 section.cover,
 section.bg-cover {
-  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/blavad-v2/bg-cover.png);
+  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/blavad-purple/bg-cover.png);
 }
 
 section.bg2 {
-  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/blavad-v2/bg-2.png);
+  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/blavad-purple/bg-2.png);
 }
 
 section.bg3 {
-  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/blavad-v2/bg-3.png);
+  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/blavad-purple/bg-3.png);
 }
