@@ -12,8 +12,8 @@
   --color-blue-base: 32, 178, 214;
   --color-purple-base: 154, 86, 255;
   --color-red-base: 255, 86, 123;
-  --color-green-base: 26, 195, 122;
-  --color-yellow-base: 255, 193, 7;
+  --color-green-base: 16, 185, 112;
+  --color-yellow-base: 225, 193, 7;
   --color-orange-base: 255, 125, 0;
 
   --color-primary-base: var(--color-green-base);
