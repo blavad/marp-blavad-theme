@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
 """
 Generate Marp slide background images (bg-1.png, bg-2.png, bg-3.png)
-from two theme colors (primary and secondary) et light/dark colors.
+from two theme colors (primary and secondary) with a transparent background.
 
 Usage:
   python generate_bg.py
   python generate_bg.py --primary "#ff2453" --secondary "#20abf3"
   python generate_bg.py --primary "255,36,83" --secondary "32,171,243"
   python generate_bg.py --primary "#7c3aed" --secondary "#0ea5e9" --output assets/img
-  python generate_bg.py --primary "#7c3aed" --secondary "#0ea5e9" --light "#ffffff" --dark "#070219" --output assets/img
-  python generate_bg.py --primary "124,58,237" --secondary "14,165,233" --light "255,255,255" --dark "7,2,25"
+  python generate_bg.py --primary "124,58,237" --secondary "14,165,233"
 """
 
 import argparse
@@ -60,40 +59,36 @@ def radial_blob(size: tuple, center: tuple, radius: int, color: tuple, opacity: 
     return img
 
 
-def composite(blobs: list, size: tuple, bg_color: tuple = (255, 255, 255)) -> Image.Image:
-    """Alpha-composite a list of RGBA blobs onto a solid background."""
-    base = Image.new("RGBA", size, (*bg_color, 255))
+def composite(blobs: list, size: tuple) -> Image.Image:
+    """Alpha-composite a list of RGBA blobs onto a transparent background."""
+    base = Image.new("RGBA", size, (0, 0, 0, 0))
     for blob in blobs:
         base = Image.alpha_composite(base, blob)
-    return base.convert("RGB")
+    return base
 
 
 def generate(
     primary: str,
     secondary: str,
-    light: str = "#ffffff",
-    dark: str = "#070219",
-    size: tuple = (960, 540),
+    size: tuple = (1280, 720),
     output_dir: str = ".",
 ):
     w, h = size
     p = parse_color(primary)
     s = parse_color(secondary)
-    light_rgb = parse_color(light)
-    dark_rgb = parse_color(dark)
 
     # Each variant: list of (center_fx, center_fy, radius_fw, color, opacity)
     # Positions expressed as fractions of width/height
     variants = {
         "bg-1": [
             # Blue blob left-center, pink blob right-center
-            (0.7, 0.70, 0.2, s, 0.55),
-            (0.95, 0.60, 0.23, p, 0.55),
+            (0.85, 0.55, 0.23, p, 0.43),
+            (0.6, 0.6, 0.23, s, 0.38),
         ],
         "bg-2": [
             # Pink bottom-left corner, blue bottom-right corner
-            (0.03, 0.97, 0.15, p, 0.55),
-            (0.97, 0.97, 0.15, s, 0.55),
+            (0.03, 0.9, 0.15, p, 0.55),
+            (0.9, 0.9, 0.15, s, 0.55),
         ],
         "bg-3": [
             # Blue top-left corner, pink bottom-right area
@@ -117,8 +112,7 @@ def generate(
             radius = int(fr * w)
             blobs.append(radial_blob(size, (cx, cy), radius, color, opacity))
 
-        bg = dark_rgb if name == "bg-cover" else light_rgb
-        img = composite(blobs, size, bg)
+        img = composite(blobs, size)
         out_path = os.path.join(output_dir, f"{name}.png")
         img.save(out_path)
         print(f"  {out_path}")
@@ -128,20 +122,16 @@ def main():
     parser = argparse.ArgumentParser(description="Generate soft-blob background PNGs for Marp themes.")
     parser.add_argument("--primary", default="#ff2453", help="Primary color   (default: #ff2453)")
     parser.add_argument("--secondary", default="#20abf3", help="Secondary color (default: #20abf3)")
-    parser.add_argument("--light", default="#ffffff", help="Light color (default: #ffffff)")
-    parser.add_argument("--dark", default="#070219", help="Dark color (default: #070219)")
-    parser.add_argument("--width", type=int, default=960, help="Image width  (default: 960)")
-    parser.add_argument("--height", type=int, default=540, help="Image height (default: 540)")
+    parser.add_argument("--width", type=int, default=1280, help="Image width  (default: 1280)")
+    parser.add_argument("--height", type=int, default=720, help="Image height (default: 720)")
     parser.add_argument("--output", default="assets/img", help="Output directory (default: assets/img)")
     args = parser.parse_args()
 
     print(f"Primary:   {args.primary}")
     print(f"Secondary: {args.secondary}")
-    print(f"Light:     {args.light}")
-    print(f"Dark:      {args.dark}")
     print(f"Size:      {args.width}x{args.height}")
     print(f"Output:")
-    generate(args.primary, args.secondary, args.light, args.dark, (args.width, args.height), args.output)
+    generate(args.primary, args.secondary, (args.width, args.height), args.output)
     print("Done.")
 
 

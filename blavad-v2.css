@@ -7,7 +7,6 @@
 
 /* Declare variables */
 :root {
-  /* --color-black-base: 16, 16, 16; */
   --color-black-base: 51, 47, 47;
   --color-white-base: 249, 247, 247;
   --color-blue-base: 32, 178, 214;
@@ -21,7 +20,6 @@
   --color-secondary-base: var(--color-orange-base);
   --color-info-base: var(--color-primary-base);
   --color-warning-base: var(--color-secondary-base);
-
 }
 
 

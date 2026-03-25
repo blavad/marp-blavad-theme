@@ -25,7 +25,7 @@
   --text-4xl: 3.5rem;
   --text-5xl: 5rem;
 
-  --color-black-base: 7, 2, 25;
+  --color-black-base: 23, 14, 51;
   --color-black: rgb(var(--color-black-base));
   --color-black-10: rgba(var(--color-black-base), 0.1);
   --color-black-25: rgba(var(--color-black-base), 0.25);
@@ -151,31 +151,33 @@
 
   --color-background: var(--color-white);
   --color-text: var(--color-foreground);
-
   font-size: 22px;
   margin: 0;
   padding: 2rem;
   font-family: var(--font-sans);
   color: var(--color-text);
   background-size: 110% 120%;
+  width: 1280px;
+  height: 720px;
 }
 
 section {
-  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/bg-1.png);
+  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/blavad/bg-1.png);
 }
 
 /* Custom classes */
 section.cover,
 section.bg-cover {
-  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/bg-cover.png);
+  background-color: var(--color-black);
+  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/blavad/bg-cover.png);
 }
 
 section.bg2 {
-  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/bg-2.png);
+  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/blavad/bg-2.png);
 }
 
 section.bg3 {
-  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/bg-3.png);
+  background-image: url(https://github.com/blavad/marp-blavad-theme/raw/main/assets/img/blavad/bg-3.png);
 }
 
 section.huge {
